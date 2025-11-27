@@ -1,0 +1,905 @@
+﻿<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AUTOMIZE - Automotive Parts & Accessories</title>
+    <link rel="stylesheet" href="Styles/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-top">
+            <div class="container">
+                <div class="logo">
+                    <h1>AUTOMIZE</h1>
+                </div>
+                <nav class="main-nav">
+                    <ul>
+                        <li><a href="#" class="active">HOME</a></li>
+                        <li class="has-dropdown">
+                            <a href="#">SHOP <i class="fas fa-chevron-down"></i></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Shop Grid</a></li>
+                                <li><a href="#">Shop List</a></li>
+                                <li><a href="#">Shop Left Sidebar</a></li>
+                                <li><a href="#">Shop Right Sidebar</a></li>
+                                <li><a href="#">Shop Full Width</a></li>
+                                <li><a href="#">Cart</a></li>
+                                <li><a href="#">Checkout</a></li>
+                            </ul>
+                        </li>
+                        <li class="has-dropdown">
+                            <a href="#">PRODUCT <i class="fas fa-chevron-down"></i></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Product Details</a></li>
+                                <li><a href="#">Product Thumbnail Left</a></li>
+                                <li><a href="#">Product Thumbnail Top</a></li>
+                                <li><a href="#">Product Thumbnail Bottom</a></li>
+                                <li><a href="#">Product Image Slider</a></li>
+                                <li><a href="#">Product Tab Accordion</a></li>
+                                <li><a href="#">Product Video</a></li>
+                                <li><a href="#">Product Sticky Add To Cart</a></li>
+                            </ul>
+                        </li>
+                        <li class="has-dropdown">
+                            <a href="#">PAGES <i class="fas fa-chevron-down"></i></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">About Us</a></li>
+                                <li><a href="#">Contact Us</a></li>
+                                <li><a href="#">FAQs Page</a></li>
+                                <li><a href="#">Store Locations</a></li>
+                                <li><a href="#">404 Page</a></li>
+                                <li><a href="#">Store Direction</a></li>
+                                <li><a href="#">Testimonial</a></li>
+                                <li><a href="#">Wishlist</a></li>
+                                <li><a href="#">My Account</a></li>
+                                <li><a href="#">Order Tracking</a></li>
+                            </ul>
+                        </li>
+                        <li class="has-dropdown">
+                            <a href="#">BLOG <i class="fas fa-chevron-down"></i></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Blog Layout</a></li>
+                                <li><a href="#">Post Layout</a></li>
+                                <li><a href="#">Blog Style</a></li>
+                                <li><a href="#">Blog Format</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="header-actions">
+                    <div class="account">
+                        <i class="fas fa-user"></i>
+                        <span>Hello, Login</span>
+                    </div>
+                    <div class="wishlist">
+                        <i class="fas fa-heart"></i>
+                        <span class="badge">0</span>
+                    </div>
+                    <div class="cart">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="badge">0</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="search-bar">
+            <div class="container">
+                <div class="browse-categories-wrapper">
+                    <button class="browse-categories">
+                        <i class="fas fa-bars"></i> BROWSE ALL CATEGORIES
+                    </button>
+                    <!-- Categories Dropdown Menu -->
+                    <div class="categories-sidebar" id="categoriesMenu">
+            <div class="category-item">
+                <img src="Images/headlight.svg" alt="Headlights">
+                <span>Headlights & Lighting</span>
+                <i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="category-item">
+                <img src="Images/audio-system.svg" alt="Audio">
+                <span>Car Audio Systems</span>
+                <i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="category-item">
+                <img src="Images/tire.svg" alt="Tires">
+                <span>Tires & Wheels</span>
+                <i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="category-item">
+                <img src="Images/suspension.svg" alt="Suspension">
+                <span>Suspension</span>
+                <i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="category-item">
+                <img src="Images/tool.svg" alt="Tools">
+                <span>Tools & Equipment</span>
+                <i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="category-item">
+                <img src="Images/oil-bottle.svg" alt="Oil">
+                <span>Oil Car</span>
+                <i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="category-item">
+                <img src="Images/brake.svg" alt="Brakes">
+                <span>Brakes</span>
+                <i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="category-item">
+                <img src="Images/auto-safety.svg" alt="Safety">
+                <span>Auto Safety & Security</span>
+                <i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="category-item">
+                <img src="Images/rims.svg" alt="Rims">
+                <span>Automotive Rims</span>
+                <i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="category-item">
+                <img src="Images/display.svg" alt="Display">
+                <span>Automotive Display</span>
+                <i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="category-item">
+                <img src="Images/car-battery.svg" alt="Battery">
+                <span>Battery</span>
+                <i class="fas fa-chevron-right"></i>
+            </div>
+                    </div>
+                </div>
+                <select class="category-select">
+                    <option>ALL CATEGORIES</option>
+                </select>
+                <div class="search-input-wrapper">
+                    <input type="text" placeholder="ENTER YOUR KEYWORD" class="search-input">
+                    <button class="search-btn"><i class="fas fa-search"></i></button>
+                </div>
+                <button class="contact-btn">
+                    <i class="fas fa-phone"></i> +123-456-789
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section" id="home">
+        <div class="container">
+            <div class="hero-wrapper">
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <h2>CAR WHEELS</h2>
+                        <h2>POWERFULL TIRES</h2>
+                        <button class="shop-now-btn">SHOP NOW</button>
+                    </div>
+                    <div class="hero-image">
+                        <img src="Images/slide4-1.jpg" alt="Car Wheels" onerror="this.src='Images/car-wheel.svg'">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Promotional Banners -->
+    <section class="promo-banners">
+        <div class="container">
+            <div class="banner-left">
+                <div class="banner-content">
+                    <h3>MICHELIN TIRE</h3>
+                    <p>PREMIUM PERFORMANCE</p>
+                    <button class="shop-now-btn">SHOP NOW</button>
+                </div>
+                <img src="Images/tire.jpg" alt="Michelin Tire">
+            </div>
+            <div class="banner-right">
+                <div class="banner-content">
+                    <h3>BETTER BRAKES</h3>
+                    <p>BEST SELLERS BRAKES SYSTEM</p>
+                    <button class="shop-now-btn">SHOP NOW</button>
+                </div>
+                <img src="Images/brake.jpg" alt="Brakes">
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Products -->
+    <section class="featured-products" id="shop">
+        <div class="container">
+            <div class="section-header">
+                <h2>FEATURED PRODUCTS</h2>
+                <div class="product-tabs">
+                    <button class="tab active">Tires & Wheels</button>
+                    <button class="tab">Headlight</button>
+                    <button class="tab">Automotive Rims</button>
+                </div>
+            </div>
+            <div class="products-grid" id="productsGrid">
+                <!-- Tires & Wheels Products -->
+                <div class="product-card" data-category="tires-wheels">
+                    <div class="product-badge new">NEW</div>
+                    <div class="product-favorite"><i class="far fa-heart"></i></div>
+                    <img src="Images/tire.jpg" alt="Product">
+                    <div class="product-category">ACCESSORIES</div>
+                    <h4>Premium Car Tire with Multi-Spoke Wheel</h4>
+                    <div class="product-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <span>(2)</span>
+                    </div>
+                    <div class="product-price">$150.00</div>
+                    <button class="add-to-cart">ADD TO CART</button>
+                </div>
+                <div class="product-card" data-category="tires-wheels">
+                    <div class="product-favorite"><i class="far fa-heart"></i></div>
+                    <img src="Images/tire.jpg" alt="Product">
+                    <div class="product-category">ACCESSORIES</div>
+                    <h4>Pellentesque sodales quam sed metus facilisis cursus</h4>
+                    <div class="product-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <span>(1)</span>
+                    </div>
+                    <div class="product-price">$30.00 - $139.00</div>
+                    <button class="add-to-cart">ADD TO CART</button>
+                </div>
+                <div class="product-card" data-category="tires-wheels">
+                    <div class="product-favorite"><i class="far fa-heart"></i></div>
+                    <img src="Images/car-wheel.svg" alt="Product">
+                    <div class="product-category">TIRES & WHEELS</div>
+                    <h4>High Performance Racing Tire Set</h4>
+                    <div class="product-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <span>(5)</span>
+                    </div>
+                    <div class="product-price">$280.00</div>
+                    <button class="add-to-cart">ADD TO CART</button>
+                </div>
+                <div class="product-card" data-category="tires-wheels">
+                    <div class="product-favorite"><i class="far fa-heart"></i></div>
+                    <img src="Images/tire-1.jpg" alt="Product">
+                    <div class="product-category">TIRES & WHEELS</div>
+                    <h4>All Season Car Tires Premium Quality</h4>
+                    <div class="product-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <span>(3)</span>
+                    </div>
+                    <div class="product-price">$199.00</div>
+                    <button class="add-to-cart">ADD TO CART</button>
+                </div>
+                <div class="product-card" data-category="tires-wheels">
+                    <div class="product-favorite"><i class="far fa-heart"></i></div>
+                    <img src="Images/car-wheel2.svg" alt="Product">
+                    <div class="product-category">TIRES & WHEELS</div>
+                    <h4>Sport Alloy Wheel Set 18 Inch</h4>
+                    <div class="product-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <span>(4)</span>
+                    </div>
+                    <div class="product-price">$320.00</div>
+                    <button class="add-to-cart">ADD TO CART</button>
+                </div>
+                
+                <!-- Headlight Products -->
+                <div class="product-card" data-category="headlight" style="display: none;">
+                    <div class="product-favorite"><i class="far fa-heart"></i></div>
+                    <img src="Images/headlight.jpg" alt="Product">
+                    <div class="product-category">AUTOMOTIVE DISPLAY</div>
+                    <h4>Mauris libero nisi iaculis molestie non posuere justo</h4>
+                    <div class="product-rating">
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <span>(0)</span>
+                    </div>
+                    <div class="product-price">$18.00</div>
+                    <button class="add-to-cart">ADD TO CART</button>
+                </div>
+                <div class="product-card" data-category="headlight" style="display: none;">
+                    <div class="product-badge new">NEW</div>
+                    <div class="product-favorite"><i class="far fa-heart"></i></div>
+                    <img src="Images/headlight-1.jpg" alt="Product">
+                    <div class="product-category">HEADLIGHTS</div>
+                    <h4>LED Headlight Bulbs High Performance</h4>
+                    <div class="product-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <span>(8)</span>
+                    </div>
+                    <div class="product-price">$120.00</div>
+                    <button class="add-to-cart">ADD TO CART</button>
+                </div>
+                <div class="product-card" data-category="headlight" style="display: none;">
+                    <div class="product-favorite"><i class="far fa-heart"></i></div>
+                    <img src="Images/headlight.svg" alt="Product">
+                    <div class="product-category">HEADLIGHTS</div>
+                    <h4>Projector Headlight Assembly Set</h4>
+                    <div class="product-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <span>(6)</span>
+                    </div>
+                    <div class="product-price">$250.00</div>
+                    <button class="add-to-cart">ADD TO CART</button>
+                </div>
+                <div class="product-card" data-category="headlight" style="display: none;">
+                    <div class="product-favorite"><i class="far fa-heart"></i></div>
+                    <img src="Images/headlight2.svg" alt="Product">
+                    <div class="product-category">HEADLIGHTS</div>
+                    <h4>HID Xenon Headlight Conversion Kit</h4>
+                    <div class="product-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <span>(12)</span>
+                    </div>
+                    <div class="product-price">$180.00</div>
+                    <button class="add-to-cart">ADD TO CART</button>
+                </div>
+                <div class="product-card" data-category="headlight" style="display: none;">
+                    <div class="product-favorite"><i class="far fa-heart"></i></div>
+                    <img src="Images/headlight-1.svg" alt="Product">
+                    <div class="product-category">HEADLIGHTS</div>
+                    <h4>Multibeam LED Headlight System</h4>
+                    <div class="product-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <span>(7)</span>
+                    </div>
+                    <div class="product-price">$220.00</div>
+                    <button class="add-to-cart">ADD TO CART</button>
+                </div>
+                
+                <!-- Automotive Rims Products -->
+                <div class="product-card" data-category="automotive-rims" style="display: none;">
+                    <div class="product-favorite"><i class="far fa-heart"></i></div>
+                    <img src="Images/rim.jpg" alt="Product">
+                    <div class="product-category">AUTOMOTIVE RIMS</div>
+                    <h4>Premium Alloy Rim 19 Inch Black</h4>
+                    <div class="product-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <span>(9)</span>
+                    </div>
+                    <div class="product-price">$350.00</div>
+                    <button class="add-to-cart">ADD TO CART</button>
+                </div>
+                <div class="product-card" data-category="automotive-rims" style="display: none;">
+                    <div class="product-badge new">NEW</div>
+                    <div class="product-favorite"><i class="far fa-heart"></i></div>
+                    <img src="Images/rims.svg" alt="Product">
+                    <div class="product-category">AUTOMOTIVE RIMS</div>
+                    <h4>Sport Racing Rim Set Chrome Finish</h4>
+                    <div class="product-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <span>(5)</span>
+                    </div>
+                    <div class="product-price">$420.00</div>
+                    <button class="add-to-cart">ADD TO CART</button>
+                </div>
+                <div class="product-card" data-category="automotive-rims" style="display: none;">
+                    <div class="product-favorite"><i class="far fa-heart"></i></div>
+                    <img src="Images/rims2.svg" alt="Product">
+                    <div class="product-category">AUTOMOTIVE RIMS</div>
+                    <h4>Multi-Spoke Alloy Rim 20 Inch</h4>
+                    <div class="product-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <span>(11)</span>
+                    </div>
+                    <div class="product-price">$380.00</div>
+                    <button class="add-to-cart">ADD TO CART</button>
+                </div>
+                <div class="product-card" data-category="automotive-rims" style="display: none;">
+                    <div class="product-favorite"><i class="far fa-heart"></i></div>
+                    <img src="Images/rims-1.svg" alt="Product">
+                    <div class="product-category">AUTOMOTIVE RIMS</div>
+                    <h4>Forged Aluminum Rim Premium</h4>
+                    <div class="product-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <span>(4)</span>
+                    </div>
+                    <div class="product-price">$450.00</div>
+                    <button class="add-to-cart">ADD TO CART</button>
+                </div>
+                <div class="product-card" data-category="automotive-rims" style="display: none;">
+                    <div class="product-favorite"><i class="far fa-heart"></i></div>
+                    <img src="Images/car-wheel.svg" alt="Product">
+                    <div class="product-category">AUTOMOTIVE RIMS</div>
+                    <h4>Classic Style Rim Set 17 Inch</h4>
+                    <div class="product-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <span>(6)</span>
+                    </div>
+                    <div class="product-price">$290.00</div>
+                    <button class="add-to-cart">ADD TO CART</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Categories Grid -->
+    <section class="product-categories">
+        <div class="container">
+            <div class="category-grid">
+                <div class="category-card">
+                    <img src="Images/brake.jpg" alt="Brakes">
+                    <div class="category-info">
+                        <h3>BRAKES SYSTEM</h3>
+                        <ul>
+                            <li>Frictional brake</li>
+                            <li>Air brake</li>
+                            <li>Hydraulic brake</li>
+                            <li>Electromagnetic brake</li>
+                            <li>Servo brake</li>
+                        </ul>
+                        <a href="#" class="shop-link">Shop All Collection <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="category-card">
+                    <img src="Images/tire.jpg" alt="Tires">
+                    <div class="category-info">
+                        <h3>TIRES & WHEELS</h3>
+                        <ul>
+                            <li>Michelin</li>
+                            <li>Goodyear Tires</li>
+                            <li>Continental</li>
+                            <li>Good Year</li>
+                            <li>Yokohama</li>
+                        </ul>
+                        <a href="#" class="shop-link">Shop All Collection <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="category-card">
+                    <img src="Images/headlight.jpg" alt="Headlights">
+                    <div class="category-info">
+                        <h3>HEADLIGHTS</h3>
+                        <ul>
+                            <li>Multibeam Led</li>
+                            <li>Projector Headlights</li>
+                            <li>Chevrolet</li>
+                            <li>Peugeot</li>
+                            <li>Toyota</li>
+                        </ul>
+                        <a href="#" class="shop-link">Shop All Collection <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="category-card">
+                    <img src="Images/rim.jpg" alt="Rims">
+                    <div class="category-info">
+                        <h3>AUTOMOTIVE RIMS</h3>
+                        <ul>
+                            <li>Fondmetal</li>
+                            <li>American Racing</li>
+                            <li>Lexani</li>
+                            <li>Vossen</li>
+                            <li>Moto Metal</li>
+                        </ul>
+                        <a href="#" class="shop-link">Shop All Collection <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="category-card">
+                    <img src="Images/audio.jpg" alt="Audio">
+                    <div class="category-info">
+                        <h3>AUDIO SYSTEM</h3>
+                        <ul>
+                            <li>Pioneer</li>
+                            <li>Bose Corporation</li>
+                            <li>Focal</li>
+                            <li>Boston Acoustics</li>
+                            <li>Sony</li>
+                        </ul>
+                        <a href="#" class="shop-link">Shop All Collection <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="category-card">
+                    <img src="Images/suspension.jpg" alt="Suspension">
+                    <div class="category-info">
+                        <h3>SUSPENSION</h3>
+                        <ul>
+                            <li>Bilstein</li>
+                            <li>Skyjacker</li>
+                            <li>HSD Coilovers</li>
+                            <li>Eibach</li>
+                            <li>KYB</li>
+                        </ul>
+                        <a href="#" class="shop-link">Shop All Collection <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Top Offers -->
+    <section class="top-offers">
+        <div class="container">
+            <h2>TOP OFFERS THIS WEEK</h2>
+            <div class="products-grid">
+                <div class="product-card">
+                    <img src="Images/headlight.jpg" alt="Product">
+                    <div class="product-favorite"><i class="far fa-heart"></i></div>
+                    <h4>Mauris vel arcu eget justo hendrerit euismod nec vitae</h4>
+                    <div class="product-rating">
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <span>(0)</span>
+                    </div>
+                    <div class="product-price">$120.00</div>
+                </div>
+                <div class="product-card">
+                    <img src="Images/oil-bottle.svg" alt="Product">
+                    <div class="product-favorite"><i class="far fa-heart"></i></div>
+                    <h4>Vivamus feugiat enim vitae consectetur ullamcorper</h4>
+                    <div class="product-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <span>(2)</span>
+                    </div>
+                    <div class="product-price">
+                        <span class="old-price">$19.00</span>
+                        <span class="new-price">$16.00</span>
+                    </div>
+                </div>
+                <div class="product-card special-offer">
+                    <div class="offer-banner">Hurry to take advantage of the offer !</div>
+                    <div class="countdown">
+                        <div class="countdown-item">
+                            <span class="countdown-number">440</span>
+                            <span class="countdown-label">Days</span>
+                        </div>
+                        <div class="countdown-item">
+                            <span class="countdown-number">08</span>
+                            <span class="countdown-label">Hours</span>
+                        </div>
+                        <div class="countdown-item">
+                            <span class="countdown-number">16</span>
+                            <span class="countdown-label">Mins</span>
+                        </div>
+                        <div class="countdown-item">
+                            <span class="countdown-number">24</span>
+                            <span class="countdown-label">Secs</span>
+                        </div>
+                    </div>
+                    <img src="Images/rim.jpg" alt="Product">
+                    <div class="product-favorite"><i class="far fa-heart"></i></div>
+                    <h4>Special Car Rim Offer</h4>
+                    <div class="product-price">$190.00</div>
+                </div>
+                <div class="product-card">
+                    <div class="product-badge new">NEW</div>
+                    <img src="Images/tire.jpg" alt="Product">
+                    <div class="product-favorite"><i class="far fa-heart"></i></div>
+                    <h4>Curabitur ultrices enim ut nunc commodo semper suscipit</h4>
+                    <div class="product-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <span>(1)</span>
+                    </div>
+                    <div class="product-price">
+                        <span class="old-price">$140.00</span>
+                        <span class="new-price">$100.00</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Car Services -->
+    <section class="car-services" id="pages">
+        <div class="container">
+            <h2>OUR CAR SERVICES</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <img src="Images/headlight.svg" alt="Detailing">
+                    </div>
+                    <h3>Detailling Service</h3>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">  
+                        <img src="Images/car-battery.svg" alt="Maintenance">
+                    </div>
+                    <h3>Maintenance Services</h3>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <img src="Images/car-battery.svg" alt="Battery">
+                    </div>
+                    <h3>Replace Battery</h3>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <img src="Images/tool.svg" alt="Washing">
+                    </div>
+                    <h3>Washing & Clean</h3>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <img src="Images/display.svg" alt="Film">
+                    </div>
+                    <h3>Insulation Film Stickers</h3>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <img src="Images/suspension.svg" alt="Parts">
+                    </div>
+                    <h3>Replacement Parts</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h3>Great Price & Services</h3>
+                    <p>Automize rice crackers are a staple in my pantry. They are a healthier alternative to traditional crackers and chips, but still satisfy my craving for something spicy and crunchy. Chilli garlic flavor is my personal favorite - it's so delicious!</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar"></div>
+                        <div class="author-info">
+                            <strong>Jennifer</strong>
+                            <span>From California</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h3>Great Price & Services</h3>
+                    <p>I have been using Automize's personal care products for a while now, and I must say, I am impressed. The quality is top-notch, and the natural ingredients make me feel good about what I'm putting on my skin. Highly recommend!</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar"></div>
+                        <div class="author-info">
+                            <strong>Christopher</strong>
+                            <span>From New Orleans</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h3>Great Price & Services</h3>
+                    <p>As a vegetarian, I always miss out on the classic breakfast staple of omelettes. But with Automize Store's Veg Omelette premix, I can finally enjoy a tasty and protein-packed breakfast option. The mix is easy to use and customize with my favorite veggies.</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar"></div>
+                        <div class="author-info">
+                            <strong>Jessica</strong>
+                            <span>From Chicago</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Latest News -->
+    <section class="latest-news" id="blog">
+        <div class="container">
+            <h2>FROM LATEST NEWS</h2>
+            <div class="news-grid">
+                <div class="news-card">
+                    <img src="Images/banner-car.png" alt="News">
+                    <div class="news-category">BATTERIES POWER</div>
+                    <h3>Growing in a Recession: Maximize Sales in the Parts Department 2</h3>
+                    <p>Duis commodo faucibus lectus, et accumsan quam egestas at. Praesent eros mi, condimentum sit amet felis quis, hendrerit...</p>
+                </div>
+                <div class="news-card">
+                    <img src="Images/bg-banner-car.png" alt="News">
+                    <div class="news-category">BATTERIES POWER</div>
+                    <h3>Growing in a Recession: Maximize Sales in the Parts Department 6</h3>
+                    <p>Duis commodo faucibus lectus, et accumsan quam egestas at. Praesent eros mi, condimentum sit amet felis quis, hendrerit...</p>
+                </div>
+                <div class="news-card">
+                    <img src="Images/bn4-1.jpg" alt="News">
+                    <div class="news-category">BATTERIES POWER</div>
+                    <h3>Growing in a Recession: Maximize Sales in the Parts Department 12</h3>
+                    <p>Duis commodo faucibus lectus, et accumsan quam egestas at. Praesent eros mi, condimentum sit amet felis quis, hendrerit...</p>
+                </div>
+                <div class="news-card">
+                    <img src="Images/bn4-2.jpg" alt="News">
+                    <div class="news-category">BATTERIES POWER</div>
+                    <h3>Growing in a Recession: Maximize Sales in the Parts Department 9</h3>
+                    <p>Duis commodo faucibus lectus, et accumsan quam egestas at. Praesent eros mi, condimentum sit amet felis quis, hendrerit...</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Guarantees -->
+    <section class="service-guarantees">
+        <div class="container">
+            <div class="guarantees-grid">
+                <div class="guarantee-item">
+                    <div class="guarantee-icon">
+                        <i class="fas fa-truck"></i>
+                    </div>
+                    <h3>FREE US DELIVERY</h3>
+                    <p>For US customers (including Alaska and Hawaii) or orders over $200.</p>
+                </div>
+                <div class="guarantee-item">
+                    <div class="guarantee-icon">
+                        <i class="fas fa-credit-card"></i>
+                    </div>
+                    <h3>SECURE PAYMENT</h3>
+                    <p>We accept Visa, American Express, Paypal, Payoneer Mastercard and Discover.</p>
+                </div>
+                <div class="guarantee-item">
+                    <div class="guarantee-icon">
+                        <i class="fas fa-umbrella"></i>
+                    </div>
+                    <h3>1 YEAR WARRANTY</h3>
+                    <p>All of our products are made with care and covered for one year against manufacturing defects.</p>
+                </div>
+                <div class="guarantee-item">
+                    <div class="guarantee-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3>SUPPORT 24/7</h3>
+                    <p>Contact us 24 hours a day, 7 days a week Call Us: 0123-456-789.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter">
+        <div class="container">
+            <div class="newsletter-content">
+                <div class="newsletter-icon">
+                    <i class="fas fa-envelope"></i>
+                </div>
+                <div class="newsletter-text">
+                    <h2>SUBSCRIBE & GET <span>15% DISCOUNT</span></h2>
+                    <p>Get 15% off your first purchase! Plus, be the first to know about sales new product launches and exclusive offers!</p>
+                </div>
+                <div class="newsletter-form">
+                    <input type="email" placeholder="ENTER YOUR EMAIL">
+                    <button>SUBSCRIBE</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>AUTOMIZE</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-pinterest"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>CONTACT US</h3>
+                    <p><i class="fas fa-phone"></i> We're available by phone <span>+123-456-789</span></p>
+                    <p><i class="fas fa-envelope"></i> Email: info@example.com</p>
+                    <p><i class="fas fa-clock"></i> Opening Hours: Monday till Friday 10 to 6 EST</p>
+                </div>
+                <div class="footer-column">
+                    <h3>CUSTOMER CARE</h3>
+                    <ul>
+                        <li><a href="#">FAQs</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Gift Card</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>HELP & SUPPORT</h3>
+                    <ul>
+                        <li><a href="#">Shipping Info</a></li>
+                        <li><a href="#">Returns</a></li>
+                        <li><a href="#">How To Order</a></li>
+                        <li><a href="#">How To Track</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>COMPANY INFO</h3>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Our Blog</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Store Locations</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top -->
+    <button class="scroll-to-top" id="scrollToTop">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="Scripts/script.js"></script>
+</body>
+</html>
+
