@@ -427,11 +427,17 @@ categoryItems.forEach(item => {
 const browseCategoriesBtn = document.querySelector('.browse-categories');
 const categoriesMenu = document.getElementById('categoriesMenu');
 
+console.log('Browse Btn:', browseCategoriesBtn);
+console.log('Categories Menu:', categoriesMenu);
+
 if (browseCategoriesBtn && categoriesMenu) {
     browseCategoriesBtn.addEventListener('click', (e) => {
         e.stopPropagation();
+        console.log('Button clicked!');
+        console.log('Menu show class before:', categoriesMenu.classList.contains('show'));
         categoriesMenu.classList.toggle('show');
         browseCategoriesBtn.classList.toggle('active');
+        console.log('Menu show class after:', categoriesMenu.classList.contains('show'));
     });
 
     // Close menu when clicking outside
@@ -446,6 +452,8 @@ if (browseCategoriesBtn && categoriesMenu) {
     categoriesMenu.addEventListener('click', (e) => {
         e.stopPropagation();
     });
+} else {
+    console.warn('Menu elements not found!');
 }
 
 // ============================================

@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Car Tire with Multi-Spoke Wheel - AUTOMIZE</title>
+    <link rel="stylesheet" href="Styles/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-top">
+            <div class="container">
+                <div class="logo">
+                    <h1>AUTOMIZE</h1>
+                </div>
+                <nav class="main-nav">
+                    <ul>
+                        <li><a href="home.html" class="active">HOME</a></li>
+                        <li class="has-dropdown">
+                            <a href="#">SHOP <i class="fas fa-chevron-down"></i></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Shop Grid</a></li>
+                                <li><a href="#">Shop List</a></li>
+                            </ul>
+                        </li>
+                        <li class="has-dropdown">
+                            <a href="#">PRODUCT <i class="fas fa-chevron-down"></i></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Product Details</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="header-actions">
+                    <div class="account">
+                        <i class="fas fa-user"></i>
+                        <span>Hello, Login</span>
+                    </div>
+                    <div class="wishlist">
+                        <i class="fas fa-heart"></i>
+                        <span class="badge">0</span>
+                    </div>
+                    <div class="cart">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="badge">0</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="search-bar">
+            <div class="container">
+                <div class="browse-categories-wrapper">
+                    <button class="browse-categories">
+                        <i class="fas fa-bars"></i> BROWSE ALL CATEGORIES
+                    </button>
+                    <div class="categories-sidebar" id="categoriesMenu">
+                        <div class="category-item">
+                            <img src="Images/headlight.svg" alt="Headlights">
+                            <span>Headlights & Lighting</span>
+                            <i class="fas fa-chevron-right"></i>
+                        </div>
+                        <div class="category-item">
+                            <img src="Images/tire.svg" alt="Tires">
+                            <span>Tires & Wheels</span>
+                            <i class="fas fa-chevron-right"></i>
+                        </div>
+                        <div class="category-item">
+                            <img src="Images/brake.svg" alt="Brakes">
+                            <span>Brakes</span>
+                            <i class="fas fa-chevron-right"></i>
+                        </div>
+                    </div>
+                </div>
+                <select class="category-select">
+                    <option>ALL CATEGORIES</option>
+                </select>
+                <div class="search-input-wrapper">
+                    <input type="text" placeholder="ENTER YOUR KEYWORD" class="search-input">
+                    <button class="search-btn"><i class="fas fa-search"></i></button>
+                </div>
+                <button class="contact-btn">
+                    <i class="fas fa-phone"></i> +123-456-789
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Breadcrumb -->
+    <section class="breadcrumb-section">
+        <div class="container">
+            <div class="breadcrumb">
+                <a href="home.html">Home</a>
+                <span>/</span>
+                <a href="#">Tires & Wheels</a>
+                <span>/</span>
+                <span class="product-title">Premium Car Tire with Multi-Spoke Wheel</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Detail Section -->
+    <section class="product-detail-section">
+        <div class="container">
+            <div class="product-detail-wrapper">
+                <!-- Product Image Gallery -->
+                <div class="product-gallery">
+                    <div class="main-image">
+                        <img id="mainImage" src="Images/tire.jpg" alt="Product Image">
+                    </div>
+                    <div class="thumbnail-images">
+                        <img src="Images/tire.jpg" alt="Front View" class="thumbnail active" onclick="changeMainImage(this)">
+                        <img src="Images/tire-1.jpg" alt="Side View" class="thumbnail" onclick="changeMainImage(this)">
+                        <img src="Images/car-wheel.svg" alt="Top View" class="thumbnail" onclick="changeMainImage(this)">
+                        <img src="Images/car-wheel2.svg" alt="Detail View" class="thumbnail" onclick="changeMainImage(this)">
+                    </div>
+                </div>
+
+                <!-- Product Information -->
+                <div class="product-info">
+                    <div class="product-badge new">NEW</div>
+                    <h1 class="product-name">Premium Car Tire with Multi-Spoke Wheel</h1>
+                    
+                    <div class="product-rating">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <span class="review-count">(2 customer reviews)</span>
+                    </div>
+
+                    <div class="product-meta">
+                        <p><strong>SKU:</strong> <span>TIRE-WHEEL-001</span></p>
+                        <p><strong>Categories:</strong> <span>Tires & Wheels, Accessories</span></p>
+                        <p><strong>Tags:</strong> <span>Premium, Durable, Multi-Spoke, Performance</span></p>
+                    </div>
+
+                    <div class="product-price-section">
+                        <div class="price">
+                            <span class="current-price">$150.00</span>
+                        </div>
+                    </div>
+
+                    <div class="product-description">
+                        <p>High-quality premium car tire with multi-spoke wheel design. Perfect for performance driving and everyday use. Features advanced grip technology and durability for all road conditions.</p>
+                    </div>
+
+                    <!-- Product Options -->
+                    <div class="product-options">
+                        <div class="option-group">
+                            <label for="size">Size:</label>
+                            <select id="size" class="product-select">
+                                <option>Choose an option</option>
+                                <option>16 Inch</option>
+                                <option>17 Inch</option>
+                                <option>18 Inch</option>
+                                <option>19 Inch</option>
+                                <option>20 Inch</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Quantity and Add to Cart -->
+                    <div class="product-actions">
+                        <div class="quantity-selector">
+                            <button class="qty-btn" onclick="decreaseQty()">−</button>
+                            <input type="number" id="qty" value="1" min="1">
+                            <button class="qty-btn" onclick="increaseQty()">+</button>
+                        </div>
+                        <button class="add-to-cart-btn">ADD TO CART</button>
+                        <button class="wishlist-btn"><i class="far fa-heart"></i></button>
+                    </div>
+
+                    <!-- Buy Now -->
+                    <button class="buy-now-btn">BUY IT NOW</button>
+
+                    <!-- Additional Info -->
+                    <div class="product-extra">
+                        <div class="extra-item">
+                            <i class="fas fa-exchange-alt"></i>
+                            <span>Compare</span>
+                        </div>
+                        <div class="extra-item">
+                            <i class="fas fa-question-circle"></i>
+                            <span>Ask a Question</span>
+                        </div>
+                        <div class="extra-item">
+                            <i class="fas fa-share-alt"></i>
+                            <span>Social Share</span>
+                        </div>
+                    </div>
+
+                    <!-- Guarantees -->
+                    <div class="product-guarantees">
+                        <div class="guarantee">
+                            <i class="fas fa-credit-card"></i>
+                            <p>Guarantee safe & secure checkout</p>
+                        </div>
+                    </div>
+
+                    <div class="delivery-info">
+                        <p><i class="fas fa-truck"></i> <strong>Estimated Delivery:</strong> 14 - 15 Dec, 2025</p>
+                        <p><i class="fas fa-box"></i> <strong>Free Shipping & Returns:</strong> On all order over $200.00</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Tabs -->
+    <section class="product-tabs-section">
+        <div class="container">
+            <div class="product-tabs-wrapper">
+                <div class="tabs-header">
+                    <button class="tab-button active" data-tab="description">Description</button>
+                    <button class="tab-button" data-tab="additional">Additional Information</button>
+                    <button class="tab-button" data-tab="reviews">Reviews (2)</button>
+                </div>
+                <div class="tabs-content">
+                    <div class="tab-content active" id="description">
+                        <p>This premium car tire features a multi-spoke wheel design that combines style with performance. The advanced grip technology ensures excellent traction in all weather conditions, while the durable construction guarantees long-lasting reliability.</p>
+                        <p>Perfect for both daily driving and high-performance applications. The tire profile is optimized for fuel efficiency and comfort, making it an excellent choice for discerning vehicle owners.</p>
+                    </div>
+                    <div class="tab-content" id="additional">
+                        <table class="additional-table">
+                            <tr>
+                                <td><strong>Material</strong></td>
+                                <td>High-grade rubber compound</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Diameter Range</strong></td>
+                                <td>16 - 20 Inch</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Weight</strong></td>
+                                <td>15-22 kg per tire</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="tab-content" id="reviews">
+                        <p>Excellent quality tire! Very durable and provides great grip. Highly recommended!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Related Products -->
+    <section class="related-products">
+        <div class="container">
+            <h2>RELATED PRODUCTS</h2>
+            <div class="products-grid">
+                <div class="product-card" onclick="window.location.href='product-2.html'">
+                    <img src="Images/tire-1.jpg" alt="Product">
+                    <div class="product-category">TIRES & WHEELS</div>
+                    <h4>High Performance Racing Tire Set</h4>
+                    <div class="product-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <span>(5)</span>
+                    </div>
+                    <div class="product-price">$280.00</div>
+                </div>
+                <div class="product-card" onclick="window.location.href='product-3.html'">
+                    <img src="Images/car-wheel.svg" alt="Product">
+                    <div class="product-category">TIRES & WHEELS</div>
+                    <h4>All Season Car Tires Premium Quality</h4>
+                    <div class="product-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <span>(3)</span>
+                    </div>
+                    <div class="product-price">$199.00</div>
+                </div>
+                <div class="product-card" onclick="window.location.href='product-4.html'">
+                    <img src="Images/car-wheel2.svg" alt="Product">
+                    <div class="product-category">TIRES & WHEELS</div>
+                    <h4>Sport Alloy Wheel Set 18 Inch</h4>
+                    <div class="product-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <span>(4)</span>
+                    </div>
+                    <div class="product-price">$320.00</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>AUTOMIZE</h3>
+                    <p>Your trusted partner for premium automotive parts and accessories.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>CONTACT US</h3>
+                    <p><i class="fas fa-phone"></i> +123-456-789</p>
+                    <p><i class="fas fa-envelope"></i> info@automize.com</p>
+                </div>
+                <div class="footer-column">
+                    <h3>CUSTOMER CARE</h3>
+                    <ul>
+                        <li><a href="#">FAQs</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top -->
+    <button class="scroll-to-top" id="scrollToTop">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="Scripts/script.js"></script>
+    <script>
+        function changeMainImage(thumbnail) {
+            const mainImage = document.getElementById('mainImage');
+            mainImage.src = thumbnail.src;
+            document.querySelectorAll('.thumbnail').forEach(t => t.classList.remove('active'));
+            thumbnail.classList.add('active');
+        }
+
+        function increaseQty() {
+            const qty = document.getElementById('qty');
+            qty.value = parseInt(qty.value) + 1;
+        }
+
+        function decreaseQty() {
+            const qty = document.getElementById('qty');
+            if (parseInt(qty.value) > 1) {
+                qty.value = parseInt(qty.value) - 1;
+            }
+        }
+
+        document.querySelectorAll('.tab-button').forEach(button => {
+            button.addEventListener('click', () => {
+                const tabName = button.getAttribute('data-tab');
+                document.querySelectorAll('.tab-button').forEach(b => b.classList.remove('active'));
+                document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+                button.classList.add('active');
+                document.getElementById(tabName).classList.add('active');
+            });
+        });
+    </script>
+</body>
+</html>

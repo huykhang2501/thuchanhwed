@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Motor Oil - AUTOMIZE</title>
+    <link rel="stylesheet" href="Styles/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-top">
+            <div class="container">
+                <div class="logo">
+                    <h1>AUTOMIZE</h1>
+                </div>
+                <nav class="main-nav">
+                    <ul>
+                        <li><a href="home.html">HOME</a></li>
+                        <li class="has-dropdown"><a href="#">SHOP <i class="fas fa-chevron-down"></i></a></li>
+                        <li class="has-dropdown"><a href="#">PRODUCT <i class="fas fa-chevron-down"></i></a></li>
+                    </ul>
+                </nav>
+                <div class="header-actions">
+                    <div class="account"><i class="fas fa-user"></i><span>Hello, Login</span></div>
+                    <div class="wishlist"><i class="fas fa-heart"></i><span class="badge">0</span></div>
+                    <div class="cart"><i class="fas fa-shopping-cart"></i><span class="badge">0</span></div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Breadcrumb -->
+    <section class="breadcrumb-section">
+        <div class="container">
+            <div class="breadcrumb">
+                <a href="home.html">Home</a> / <a href="#">Fluids & Oils</a> / <span class="product-title">Premium Motor Oil</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Detail Section -->
+    <section class="product-detail-section">
+        <div class="container">
+            <div class="product-detail-wrapper">
+                <div class="product-gallery">
+                    <div class="main-image">
+                        <img id="mainImage" src="Images/oil-bottle.svg" alt="Motor Oil Front View">
+                    </div>
+                    <div class="thumbnail-images">
+                        <img src="Images/oil-bottle.svg" alt="Front" class="thumbnail active" onclick="changeMainImage(this)">
+                        <img src="Images/oil-bottle.svg" alt="Side" class="thumbnail" onclick="changeMainImage(this)">
+                        <img src="Images/headlight.svg" alt="Back" class="thumbnail" onclick="changeMainImage(this)">
+                        <img src="Images/headlight.jpg" alt="Detail" class="thumbnail" onclick="changeMainImage(this)">
+                    </div>
+                </div>
+
+                <div class="product-info">
+                    <h1 class="product-name">Premium Motor Oil</h1>
+                    <div class="product-rating">
+                        <div class="stars">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <span class="review-count">(2 customer reviews)</span>
+                    </div>
+
+                    <div class="product-meta">
+                        <p><strong>SKU:</strong> <span>MOTOR-OIL-007</span></p>
+                        <p><strong>Categories:</strong> <span>Fluids & Oils</span></p>
+                        <p><strong>Tags:</strong> <span>Motor Oil, Premium, Engine Care</span></p>
+                    </div>
+
+                    <div class="product-price-section">
+                        <div class="price">
+                            <span class="old-price">$19.00</span>
+                            <span class="current-price">$16.00</span>
+                        </div>
+                    </div>
+
+                    <div class="product-description">
+                        <p>High-quality synthetic motor oil that provides superior engine protection and performance. Extends engine life with advanced anti-wear technology and excellent thermal stability.</p>
+                    </div>
+
+                    <div class="product-options">
+                        <div class="option-group">
+                            <label for="viscosity">Viscosity:</label>
+                            <select id="viscosity" class="product-select">
+                                <option>Choose an option</option>
+                                <option>5W-20</option>
+                                <option>5W-30</option>
+                                <option>10W-30</option>
+                                <option>10W-40</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="product-actions">
+                        <div class="quantity-selector">
+                            <button class="qty-btn" onclick="decreaseQty()">−</button>
+                            <input type="number" id="qty" value="1" min="1">
+                            <button class="qty-btn" onclick="increaseQty()">+</button>
+                        </div>
+                        <button class="add-to-cart-btn">ADD TO CART</button>
+                        <button class="wishlist-btn"><i class="far fa-heart"></i></button>
+                    </div>
+
+                    <button class="buy-now-btn">BUY IT NOW</button>
+
+                    <div class="product-extra">
+                        <div class="extra-item"><i class="fas fa-exchange-alt"></i><span>Compare</span></div>
+                        <div class="extra-item"><i class="fas fa-question-circle"></i><span>Ask a Question</span></div>
+                        <div class="extra-item"><i class="fas fa-share-alt"></i><span>Social Share</span></div>
+                    </div>
+
+                    <div class="delivery-info">
+                        <p><i class="fas fa-truck"></i> <strong>Estimated Delivery:</strong> 11 - 12 Dec, 2025</p>
+                        <p><i class="fas fa-box"></i> <strong>Free Shipping:</strong> On all orders over $200.00</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Tabs -->
+    <section class="product-tabs-section">
+        <div class="container">
+            <div class="product-tabs-wrapper">
+                <div class="tabs-header">
+                    <button class="tab-button active" data-tab="description">Description</button>
+                    <button class="tab-button" data-tab="additional">Additional Information</button>
+                    <button class="tab-button" data-tab="reviews">Reviews (2)</button>
+                </div>
+                <div class="tabs-content">
+                    <div class="tab-content active" id="description">
+                        <p>Our premium synthetic motor oil is engineered to provide maximum protection for your engine. It maintains optimal viscosity across a wide temperature range, ensuring smooth operation in any climate condition.</p>
+                    </div>
+                    <div class="tab-content" id="additional">
+                        <table class="additional-table">
+                            <tr><td><strong>Type</strong></td><td>Synthetic Motor Oil</td></tr>
+                            <tr><td><strong>Viscosity Grades</strong></td><td>5W-20, 5W-30, 10W-30, 10W-40</td></tr>
+                            <tr><td><strong>Volume</strong></td><td>1 Quart (946 ml)</td></tr>
+                        </table>
+                    </div>
+                    <div class="tab-content" id="reviews">
+                        <p>Great oil! My engine runs smoother and cleaner. Definitely worth the price.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Related Products -->
+    <section class="related-products">
+        <div class="container">
+            <h2>RELATED PRODUCTS</h2>
+            <div class="products-grid">
+                <div class="product-card" onclick="window.location.href='product-6.html'">
+                    <img src="Images/headlight.jpg" alt="LED Headlight"><div class="product-category">HEADLIGHTS</div>
+                    <h4>LED Headlight Bulbs High Performance</h4>
+                    <div class="product-rating"><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><span>(0)</span></div>
+                    <div class="product-price">$120.00</div>
+                </div>
+                <div class="product-card" onclick="window.location.href='product-8.html'">
+                    <img src="Images/rim.jpg" alt="Car Rim"><div class="product-category">WHEELS</div>
+                    <h4>Special Car Rim Offer</h4>
+                    <div class="product-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><span>(8)</span></div>
+                    <div class="product-price">$190.00</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column"><h3>AUTOMIZE</h3><p>Premium automotive parts and accessories.</p></div>
+                <div class="footer-column"><h3>CONTACT</h3><p><i class="fas fa-phone"></i> +123-456-789</p></div>
+            </div>
+        </div>
+    </footer>
+
+    <button class="scroll-to-top" id="scrollToTop"><i class="fas fa-arrow-up"></i></button>
+    <script src="Scripts/script.js"></script>
+    <script>
+        function changeMainImage(t){document.getElementById('mainImage').src=t.src;document.querySelectorAll('.thumbnail').forEach(e=>e.classList.remove('active'));t.classList.add('active');}
+        function increaseQty(){document.getElementById('qty').value=parseInt(document.getElementById('qty').value)+1;}
+        function decreaseQty(){const q=document.getElementById('qty');if(parseInt(q.value)>1)q.value=parseInt(q.value)-1;}
+        document.querySelectorAll('.tab-button').forEach(b=>{b.addEventListener('click',()=>{const t=b.getAttribute('data-tab');document.querySelectorAll('.tab-button').forEach(e=>e.classList.remove('active'));document.querySelectorAll('.tab-content').forEach(e=>e.classList.remove('active'));b.classList.add('active');document.getElementById(t).classList.add('active');});});
+    </script>
+</body>
+</html>

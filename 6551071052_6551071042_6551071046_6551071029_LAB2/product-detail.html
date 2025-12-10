@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details - AUTOMIZE</title>
+    <link rel="stylesheet" href="Styles/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-top">
+            <div class="container">
+                <div class="logo">
+                    <h1>AUTOMIZE</h1>
+                </div>
+                <nav class="main-nav">
+                    <ul>
+                        <li><a href="home.html" class="active">HOME</a></li>
+                        <li class="has-dropdown">
+                            <a href="#">SHOP <i class="fas fa-chevron-down"></i></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Shop Grid</a></li>
+                                <li><a href="#">Shop List</a></li>
+                                <li><a href="#">Shop Left Sidebar</a></li>
+                            </ul>
+                        </li>
+                        <li class="has-dropdown">
+                            <a href="#">PRODUCT <i class="fas fa-chevron-down"></i></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Product Details</a></li>
+                                <li><a href="#">Product Thumbnail Left</a></li>
+                            </ul>
+                        </li>
+                        <li class="has-dropdown">
+                            <a href="#">PAGES <i class="fas fa-chevron-down"></i></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">About Us</a></li>
+                                <li><a href="#">Contact Us</a></li>
+                            </ul>
+                        </li>
+                        <li class="has-dropdown">
+                            <a href="#">BLOG <i class="fas fa-chevron-down"></i></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Blog Layout</a></li>
+                                <li><a href="#">Post Layout</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="header-actions">
+                    <div class="account">
+                        <i class="fas fa-user"></i>
+                        <span>Hello, Login</span>
+                    </div>
+                    <div class="wishlist">
+                        <i class="fas fa-heart"></i>
+                        <span class="badge">0</span>
+                    </div>
+                    <div class="cart">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="badge">0</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="search-bar">
+            <div class="container">
+                <div class="browse-categories-wrapper">
+                    <button class="browse-categories">
+                        <i class="fas fa-bars"></i> BROWSE ALL CATEGORIES
+                    </button>
+                </div>
+                <select class="category-select">
+                    <option>ALL CATEGORIES</option>
+                </select>
+                <div class="search-input-wrapper">
+                    <input type="text" placeholder="ENTER YOUR KEYWORD" class="search-input">
+                    <button class="search-btn"><i class="fas fa-search"></i></button>
+                </div>
+                <button class="contact-btn">
+                    <i class="fas fa-phone"></i> +123-456-789
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Breadcrumb -->
+    <section class="breadcrumb-section">
+        <div class="container">
+            <div class="breadcrumb">
+                <a href="home.html">Home</a>
+                <span>/</span>
+                <a href="#">Accessories</a>
+                <span>/</span>
+                <span class="product-title">Pellentesque sodales quam sed metus facilisis cursus</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Detail Section -->
+    <section class="product-detail-section">
+        <div class="container">
+            <div class="product-detail-wrapper">
+                <!-- Product Image Gallery -->
+                <div class="product-gallery">
+                    <div class="main-image">
+                        <img id="mainImage" src="Images/tire.jpg" alt="Product Image">
+                    </div>
+                    <div class="thumbnail-images">
+                        <img src="Images/tire.jpg" alt="Thumbnail 1" class="thumbnail" onclick="changeMainImage(this)">
+                        <img src="Images/tire-1.jpg" alt="Thumbnail 2" class="thumbnail" onclick="changeMainImage(this)">
+                        <img src="Images/car-wheel.svg" alt="Thumbnail 3" class="thumbnail" onclick="changeMainImage(this)">
+                        <img src="Images/car-wheel2.svg" alt="Thumbnail 4" class="thumbnail" onclick="changeMainImage(this)">
+                    </div>
+                </div>
+
+                <!-- Product Information -->
+                <div class="product-info">
+                    <h1 class="product-name">Pellentesque sodales quam sed metus facilisis cursus</h1>
+                    
+                    <div class="product-rating">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <span class="review-count">(1 customer review)</span>
+                    </div>
+
+                    <div class="product-meta">
+                        <p><strong>SKU:</strong> <span>Woo-Hoodie-With-Zipper-1</span></p>
+                        <p><strong>Categories:</strong> <span>Accessories, Headlight, Tires & Wheels</span></p>
+                        <p><strong>Tags:</strong> <span>Dualix, Hyundai, Kia, Lamborghini, Triumph</span></p>
+                    </div>
+
+                    <div class="product-price-section">
+                        <div class="price">
+                            <span class="old-price">$39.00</span>
+                            <span class="current-price">$30.00 - $139.00</span>
+                        </div>
+                    </div>
+
+                    <div class="product-description">
+                        <p>Full of flavour but with palate cleansing acidity, our kiwifruit are rich in fibre and packed with the enzyme actindin which are brilliant for digestion.</p>
+                    </div>
+
+                    <!-- Product Options -->
+                    <div class="product-options">
+                        <div class="option-group">
+                            <label for="size">Size:</label>
+                            <select id="size" class="product-select">
+                                <option>Choose an option</option>
+                                <option>Small</option>
+                                <option>Medium</option>
+                                <option>Large</option>
+                                <option>XL</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Quantity and Add to Cart -->
+                    <div class="product-actions">
+                        <div class="quantity-selector">
+                            <button class="qty-btn" onclick="decreaseQty()">−</button>
+                            <input type="number" id="qty" value="1" min="1">
+                            <button class="qty-btn" onclick="increaseQty()">+</button>
+                        </div>
+                        <button class="add-to-cart-btn">ADD TO CART</button>
+                        <button class="wishlist-btn"><i class="far fa-heart"></i></button>
+                    </div>
+
+                    <!-- Buy Now -->
+                    <button class="buy-now-btn">BUY IT NOW</button>
+
+                    <!-- Additional Info -->
+                    <div class="product-extra">
+                        <div class="extra-item">
+                            <i class="fas fa-exchange-alt"></i>
+                            <span>Compare</span>
+                        </div>
+                        <div class="extra-item">
+                            <i class="fas fa-question-circle"></i>
+                            <span>Ask a Question</span>
+                        </div>
+                        <div class="extra-item">
+                            <i class="fas fa-share-alt"></i>
+                            <span>Social Share</span>
+                        </div>
+                    </div>
+
+                    <!-- Guarantees -->
+                    <div class="product-guarantees">
+                        <div class="guarantee">
+                            <i class="fas fa-credit-card"></i>
+                            <p>Guarantee safe & secure checkout</p>
+                        </div>
+                        <div class="guarantee-payments">
+                            <img src="https://via.placeholder.com/40x25" alt="Visa">
+                            <img src="https://via.placeholder.com/40x25" alt="Mastercard">
+                            <img src="https://via.placeholder.com/40x25" alt="PayPal">
+                        </div>
+                    </div>
+
+                    <div class="delivery-info">
+                        <p><i class="fas fa-truck"></i> <strong>Estimated Delivery:</strong> 14 - 15 Dec, 2025</p>
+                        <p><i class="fas fa-box"></i> <strong>Free Shipping & Returns:</strong> On all order over $200.00</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Tabs -->
+    <section class="product-tabs-section">
+        <div class="container">
+            <div class="product-tabs-wrapper">
+                <div class="tabs-header">
+                    <button class="tab-button active" data-tab="description">Description</button>
+                    <button class="tab-button" data-tab="additional">Additional Information</button>
+                    <button class="tab-button" data-tab="reviews">Reviews (1)</button>
+                </div>
+                <div class="tabs-content">
+                    <div class="tab-content active" id="description">
+                        <p>Donec dapibus tellus sem, quis aliquam libero pharetra non. Niam vitae fermentum leo. Pellentesque bibendum dui eu mi tempor sodales. Integer gravida odio in sem laoreet tempus. Nunc vehicula nibh mauris, id bibendum metus facilisis interdum.</p>
+                        <p>Phasellus suscipit dictum lacus eu auctor. Duis commodo faucibus lectus, et accumsan quam egestas at. Praesent eros mi, condimentum sit amet felis quis, hendrerit ullamcorper turpis.</p>
+                    </div>
+                    <div class="tab-content" id="additional">
+                        <table class="additional-table">
+                            <tr>
+                                <td><strong>Weight</strong></td>
+                                <td>N/A</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Dimensions</strong></td>
+                                <td>16 inch, 18 inch, 19 inch, 20 inch</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="tab-content" id="reviews">
+                        <p>There are no reviews yet.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Related Products -->
+    <section class="related-products">
+        <div class="container">
+            <h2>RELATED PRODUCTS</h2>
+            <div class="products-grid">
+                <div class="product-card">
+                    <img src="Images/brake.jpg" alt="Product">
+                    <div class="product-category">BRAKES</div>
+                    <h4>Aenean tempus orci non felis pharetra scelerisque dapibus</h4>
+                    <div class="product-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <span>(2)</span>
+                    </div>
+                    <div class="product-price">$20.00</div>
+                </div>
+                <div class="product-card">
+                    <img src="Images/oil-bottle.svg" alt="Product">
+                    <div class="product-category">ACCESSORIES</div>
+                    <h4>Vivamus feugiat enim vitae consectetur ullamcorper</h4>
+                    <div class="product-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <span>(2)</span>
+                    </div>
+                    <div class="product-price">$16.00</div>
+                </div>
+                <div class="product-card">
+                    <img src="Images/car-wheel.svg" alt="Product">
+                    <div class="product-category">TIRES & WHEELS</div>
+                    <h4>Dorman Steel Wheel Compatible with Select Honda Models</h4>
+                    <div class="product-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <span>(4)</span>
+                    </div>
+                    <div class="product-price">$90.00</div>
+                </div>
+                <div class="product-card">
+                    <img src="Images/audio.jpg" alt="Product">
+                    <div class="product-category">AUDIO SYSTEMS</div>
+                    <h4>Etiam tristique nisl odio posuere aliquam dui venenatis</h4>
+                    <div class="product-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <span>(1)</span>
+                    </div>
+                    <div class="product-price">$16.00</div>
+                </div>
+                <div class="product-card">
+                    <img src="Images/suspension.jpg" alt="Product">
+                    <div class="product-category">BRAKES</div>
+                    <h4>Donec quis leo feugiat fringilla sem ut feugiat erat</h4>
+                    <div class="product-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <span>(0)</span>
+                    </div>
+                    <div class="product-price">$15.00</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>AUTOMIZE</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-pinterest"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>CONTACT US</h3>
+                    <p><i class="fas fa-phone"></i> We're available by phone <span>+123-456-789</span></p>
+                    <p><i class="fas fa-envelope"></i> Email: info@example.com</p>
+                    <p><i class="fas fa-clock"></i> Opening Hours: Monday till Friday 10 to 6 EST</p>
+                </div>
+                <div class="footer-column">
+                    <h3>CUSTOMER CARE</h3>
+                    <ul>
+                        <li><a href="#">FAQs</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Gift Card</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>HELP & SUPPORT</h3>
+                    <ul>
+                        <li><a href="#">Shipping Info</a></li>
+                        <li><a href="#">Returns</a></li>
+                        <li><a href="#">How To Order</a></li>
+                        <li><a href="#">How To Track</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>COMPANY INFO</h3>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Our Blog</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Store Locations</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="footer-copyright">
+                    <p>Copyright © 2024 RaisingBamboo. All Rights Reserved.</p>
+                </div>
+                <div class="footer-payments">
+                    <img src="https://via.placeholder.com/40x25" alt="Visa">
+                    <img src="https://via.placeholder.com/40x25" alt="Mastercard">
+                    <img src="https://via.placeholder.com/40x25" alt="PayPal">
+                    <img src="https://via.placeholder.com/40x25" alt="Google Pay">
+                    <img src="https://via.placeholder.com/40x25" alt="Apple Pay">
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top -->
+    <button class="scroll-to-top" id="scrollToTop">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="Scripts/script.js"></script>
+    <script>
+        function changeMainImage(thumbnail) {
+            const mainImage = document.getElementById('mainImage');
+            mainImage.src = thumbnail.src;
+            
+            // Remove active class from all thumbnails
+            document.querySelectorAll('.thumbnail').forEach(t => t.classList.remove('active'));
+            // Add active class to clicked thumbnail
+            thumbnail.classList.add('active');
+        }
+
+        function increaseQty() {
+            const qty = document.getElementById('qty');
+            qty.value = parseInt(qty.value) + 1;
+        }
+
+        function decreaseQty() {
+            const qty = document.getElementById('qty');
+            if (parseInt(qty.value) > 1) {
+                qty.value = parseInt(qty.value) - 1;
+            }
+        }
+
+        // Tab switching
+        document.querySelectorAll('.tab-button').forEach(button => {
+            button.addEventListener('click', () => {
+                const tabName = button.getAttribute('data-tab');
+                
+                // Remove active class from all buttons and contents
+                document.querySelectorAll('.tab-button').forEach(b => b.classList.remove('active'));
+                document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+                
+                // Add active class to clicked button and corresponding content
+                button.classList.add('active');
+                document.getElementById(tabName).classList.add('active');
+            });
+        });
+    </script>
+</body>
+</html>
