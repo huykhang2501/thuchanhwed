@@ -85,10 +85,17 @@ if (scrollToTopBtn) {
     
     const tabs = document.querySelectorAll('.product-tabs .tab');
     const productsGrid = document.getElementById('productsGrid');
-    let productCards = document.querySelectorAll('.product-card');
     let isTransitioning = false;
     
-    if (!tabs.length || !productsGrid) return;
+    if (!tabs.length || !productsGrid) {
+        console.log('Product tabs or grid not found');
+        return;
+    }
+    
+    // Get only product cards within the productsGrid
+    function getProductCards() {
+        return productsGrid.querySelectorAll('.product-card[data-category]');
+    }
     
     // Category mapping
     const categoryMap = {
@@ -98,37 +105,43 @@ if (scrollToTopBtn) {
     };
     
     // Function to show products by category with animation
-    function showCategory(category, delay = 0) {
-        setTimeout(() => {
-            let visibleCount = 0;
+    function showCategory(category) {
+        const productCards = getProductCards();
+        let visibleCount = 0;
+        
+        productCards.forEach((card, index) => {
+            const cardCategory = card.getAttribute('data-category');
             
-            productCards.forEach((card, index) => {
-                const cardCategory = card.getAttribute('data-category');
-                
-                if (cardCategory === category) {
-                    card.style.display = 'block';
-                    // Stagger animation for each card
-                    card.style.animationDelay = `${index * 0.1}s`;
-                    card.style.animation = 'fadeInUp 0.6s ease-out forwards';
-                    visibleCount++;
-                } else {
-                    card.style.display = 'none';
-                    card.style.animation = '';
-                }
-            });
-            
-            // If no products found, show message
-            if (visibleCount === 0) {
-                console.warn(`No products found for category: ${category}`);
+            if (cardCategory === category) {
+                card.style.display = 'block';
+                card.style.opacity = '0';
+                // Stagger animation for each card
+                setTimeout(() => {
+                    card.style.transition = 'opacity 0.4s ease, transform 0.4s ease';
+                    card.style.opacity = '1';
+                    card.style.transform = 'translateY(0)';
+                }, index * 50);
+                visibleCount++;
+            } else {
+                card.style.display = 'none';
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(20px)';
             }
-            
-            isTransitioning = false;
-        }, delay);
+        });
+        
+        // If no products found, show message
+        if (visibleCount === 0) {
+            console.warn(`No products found for category: ${category}`);
+        }
+        
+        isTransitioning = false;
     }
     
     // Tab click handlers
     tabs.forEach(tab => {
-        tab.addEventListener('click', () => {
+        tab.addEventListener('click', function(e) {
+            e.preventDefault();
+            
             // Prevent multiple clicks during transition
             if (isTransitioning) return;
             
@@ -136,27 +149,30 @@ if (scrollToTopBtn) {
             
             // Remove active class from all tabs
             tabs.forEach(t => t.classList.remove('active'));
-            tab.classList.add('active');
+            this.classList.add('active');
             
             // Get category from tab text
-            const tabText = tab.textContent.trim();
+            const tabText = this.textContent.trim();
             const category = categoryMap[tabText];
+            
+            console.log('Tab clicked:', tabText, 'Category:', category);
             
             if (category) {
                 // Fade out current products
-                productsGrid.style.opacity = '0';
-                productsGrid.style.transform = 'translateY(20px)';
-                productsGrid.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
+                productsGrid.style.opacity = '0.5';
+                productsGrid.style.transform = 'translateY(10px)';
+                productsGrid.style.transition = 'opacity 0.2s ease, transform 0.2s ease';
                 
                 // After fade out, show new category
                 setTimeout(() => {
-                    showCategory(category, 0);
+                    showCategory(category);
                     
                     // Fade in new products
                     productsGrid.style.opacity = '1';
                     productsGrid.style.transform = 'translateY(0)';
-                }, 300);
+                }, 200);
             } else {
+                console.warn('Category not found for tab:', tabText);
                 isTransitioning = false;
             }
         });
@@ -168,12 +184,16 @@ if (scrollToTopBtn) {
         if (firstTab) {
             const firstCategory = categoryMap[firstTab.textContent.trim()];
             if (firstCategory) {
+                console.log('Initializing with category:', firstCategory);
+                const productCards = getProductCards();
+                
                 // Show first category products immediately
                 productCards.forEach(card => {
                     const cardCategory = card.getAttribute('data-category');
                     if (cardCategory === firstCategory) {
                         card.style.display = 'block';
                         card.style.opacity = '1';
+                        card.style.transform = 'translateY(0)';
                     } else {
                         card.style.display = 'none';
                         card.style.opacity = '0';
@@ -424,36 +444,82 @@ categoryItems.forEach(item => {
 });
 
 // Categories Dropdown Menu Toggle
-const browseCategoriesBtn = document.querySelector('.browse-categories');
-const categoriesMenu = document.getElementById('categoriesMenu');
+function initCategoriesMenu() {
+    'use strict';
+    
+    const browseCategoriesBtn = document.querySelector('.browse-categories');
+    const categoriesMenu = document.getElementById('categoriesMenu');
 
-console.log('Browse Btn:', browseCategoriesBtn);
-console.log('Categories Menu:', categoriesMenu);
+    console.log('Initializing categories menu...');
+    console.log('Button found:', browseCategoriesBtn);
+    console.log('Menu found:', categoriesMenu);
 
-if (browseCategoriesBtn && categoriesMenu) {
-    browseCategoriesBtn.addEventListener('click', (e) => {
-        e.stopPropagation();
-        console.log('Button clicked!');
-        console.log('Menu show class before:', categoriesMenu.classList.contains('show'));
-        categoriesMenu.classList.toggle('show');
-        browseCategoriesBtn.classList.toggle('active');
-        console.log('Menu show class after:', categoriesMenu.classList.contains('show'));
-    });
+    if (browseCategoriesBtn && categoriesMenu) {
+        console.log('Setting up event listeners...');
+        
+        // Toggle menu when button is clicked
+        browseCategoriesBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            console.log('Button clicked!');
+            
+            const isOpen = categoriesMenu.classList.contains('show');
+            console.log('Menu is currently:', isOpen ? 'open' : 'closed');
+            
+            if (isOpen) {
+                // Close menu
+                categoriesMenu.classList.remove('show');
+                browseCategoriesBtn.classList.remove('active');
+                console.log('Menu closed');
+            } else {
+                // Open menu
+                categoriesMenu.classList.add('show');
+                browseCategoriesBtn.classList.add('active');
+                console.log('Menu opened');
+            }
+        });
 
-    // Close menu when clicking outside
-    document.addEventListener('click', (e) => {
-        if (!categoriesMenu.contains(e.target) && !browseCategoriesBtn.contains(e.target)) {
-            categoriesMenu.classList.remove('show');
-            browseCategoriesBtn.classList.remove('active');
-        }
-    });
+        // Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+            const isClickInsideMenu = categoriesMenu.contains(e.target);
+            const isClickOnButton = browseCategoriesBtn.contains(e.target);
+            
+            if (!isClickInsideMenu && !isClickOnButton && categoriesMenu.classList.contains('show')) {
+                categoriesMenu.classList.remove('show');
+                browseCategoriesBtn.classList.remove('active');
+                console.log('Menu closed (clicked outside)');
+            }
+        });
 
-    // Prevent menu from closing when clicking inside
-    categoriesMenu.addEventListener('click', (e) => {
-        e.stopPropagation();
-    });
+        // Prevent menu from closing when clicking inside menu items
+        categoriesMenu.addEventListener('click', (e) => {
+            e.stopPropagation();
+        });
+        
+        // Handle category item clicks
+        const categoryItems = categoriesMenu.querySelectorAll('.category-item');
+        categoryItems.forEach(item => {
+            item.addEventListener('click', () => {
+                const categoryName = item.querySelector('span').textContent;
+                console.log('Selected category:', categoryName);
+                // You can add navigation logic here
+            });
+        });
+        
+        console.log('Categories menu initialized successfully!');
+    } else {
+        console.error('Categories menu elements not found!');
+        console.error('Button:', browseCategoriesBtn);
+        console.error('Menu:', categoriesMenu);
+    }
+}
+
+// Initialize when DOM is ready
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initCategoriesMenu);
 } else {
-    console.warn('Menu elements not found!');
+    // DOM is already ready
+    initCategoriesMenu();
 }
 
 // ============================================
@@ -797,6 +863,11 @@ const observer = new IntersectionObserver((entries) => {
 // Observe elements for animation
 document.addEventListener('DOMContentLoaded', () => {
     console.log('AUTOMIZE website loaded');
+    
+    // Initialize categories menu (if not already initialized)
+    if (typeof initCategoriesMenu === 'function') {
+        initCategoriesMenu();
+    }
     
     // Initialize countdown
     updateCountdown();
